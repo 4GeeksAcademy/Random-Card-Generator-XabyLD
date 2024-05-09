@@ -10,7 +10,7 @@ const insertarP = () => {
 };
 
 const numberSuitRandom = () => {
-  let randomSuit = Math.floor(Math.random() * 3);
+  let randomSuit = Math.floor(Math.random() * 4);
 
   // ♦ ♥ ♠ ♣
   if (randomSuit === 0) {
@@ -27,6 +27,8 @@ const numberSuitRandom = () => {
     selectorFooterSuit.style.color = "green";
   } else {
     suit = "♠";
+    selectorHeaderSuit.style.color = "black";
+    selectorFooterSuit.style.color = "black";
   }
 
   let randomNumber = Math.floor(Math.random() * 13 + 1);
