@@ -3,20 +3,33 @@ let selectorBodyNumber = document.querySelector(".card-body");
 let selectorFooterSuit = document.querySelector(".card-footer");
 let suit;
 
+const insertarP = () => {
+  const myP = document.createElement("p");
+  myP.innerText = "Hola";
+  document.getElementsByClassName("card-header").appendChild(myP);
+};
+
 const numberSuitRandom = () => {
   let randomSuit = Math.floor(Math.random() * 3);
-  let randomNumber = Math.floor(Math.random() * 13 + 1);
-  // ♦ ♥ ♠ ♣
 
+  // ♦ ♥ ♠ ♣
   if (randomSuit === 0) {
     suit = "♦";
+    selectorHeaderSuit.style.color = "blue";
+    selectorFooterSuit.style.color = "blue";
   } else if (randomSuit === 1) {
     suit = "♥";
+    selectorHeaderSuit.style.color = "red";
+    selectorFooterSuit.style.color = "red";
   } else if (randomSuit === 2) {
-    suit = "♠";
-  } else {
     suit = "♣";
+    selectorHeaderSuit.style.color = "green";
+    selectorFooterSuit.style.color = "green";
+  } else {
+    suit = "♠";
   }
+
+  let randomNumber = Math.floor(Math.random() * 13 + 1);
 
   if (randomNumber === 10) {
     randomNumber = "T";
@@ -33,16 +46,12 @@ const numberSuitRandom = () => {
   selectorHeaderSuit.innerHTML = suit;
   selectorFooterSuit.innerHTML = suit;
   selectorBodyNumber.innerHTML = randomNumber;
-
-  if (suit === "♥") {
-    suit.style.backgroundColor = "red";
-  }
 };
 
-const colorSuit = () => {
-  console.log(suit);
-  if (selectorHeaderSuit === "♦") {
-    selectorHeaderSuit.innerHTML = suit;
-    suit.style.backgroundColor = "blue";
-  }
+const anotherCard = () => {
+  let selectedButton = document
+    .querySelector("#buttonCharge")
+    .addEventListener("click", function() {
+      numberSuitRandom();
+    });
 };

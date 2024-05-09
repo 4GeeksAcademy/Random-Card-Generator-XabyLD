@@ -11,6 +11,10 @@ div {
   font-size: 9.375rem;
 }
 
-.heart {
-  background-color: red;
+button {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 40px;
 }
