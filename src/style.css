@@ -1,1 +1,16 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-color: green;
+}
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div {
+  font-size: 9.375rem;
+}
+
+.heart {
+  background-color: red;
+}
