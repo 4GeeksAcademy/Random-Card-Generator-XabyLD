@@ -4,10 +4,9 @@ let selectorFooterSuit = document.querySelector(".card-footer");
 let suit;
 let prueba = 0;
 
-const insertarP = () => {
-  const myP = document.createElement("p");
-  myP.innerText = "Hola";
-  document.getElementsByClassName("card-header").appendChild(myP);
+const setWidthHeightCard = () => {
+  let selectedWidthInput = document.getElementById("widthCard").value;
+  let selectedCard = document.querySelector(".card");
 };
 
 const numberSuitRandom = () => {
@@ -81,10 +80,3 @@ const contadorTenSeconds = () => {
 };
 
 contadorTenSeconds();
-
-/*const timer = () => {
-  setInterval(() => {
-    numberSuitRandom();
-  }, 10000);
-};
-*/
