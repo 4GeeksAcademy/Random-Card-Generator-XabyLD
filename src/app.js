@@ -18,18 +18,22 @@ const numberSuitRandom = () => {
     suit = "♦";
     selectorHeaderSuit.style.color = "blue";
     selectorFooterSuit.style.color = "blue";
+    selectorBodyNumber.style.color = "blue";
   } else if (randomSuit === 1) {
     suit = "♥";
     selectorHeaderSuit.style.color = "red";
     selectorFooterSuit.style.color = "red";
+    selectorBodyNumber.style.color = "red";
   } else if (randomSuit === 2) {
     suit = "♣";
     selectorHeaderSuit.style.color = "green";
     selectorFooterSuit.style.color = "green";
+    selectorBodyNumber.style.color = "green";
   } else {
     suit = "♠";
     selectorHeaderSuit.style.color = "black";
     selectorFooterSuit.style.color = "black";
+    selectorBodyNumber.style.color = "black";
   }
 
   let randomNumber = Math.floor(Math.random() * 13 + 1);
@@ -59,8 +63,28 @@ const anotherCard = () => {
     });
 };
 
-const timer = () => {
+let selectedDiv = document.querySelector("#contador");
+
+const contadorTenSeconds = () => {
+  let contador = 10;
+
+  const restaSegundo = setInterval(() => {
+    selectedDiv.textContent = contador;
+
+    contador--;
+
+    if (contador === 0) {
+      numberSuitRandom();
+      contador = 10;
+    }
+  }, 1000);
+};
+
+contadorTenSeconds();
+
+/*const timer = () => {
   setInterval(() => {
     numberSuitRandom();
   }, 10000);
 };
+*/
