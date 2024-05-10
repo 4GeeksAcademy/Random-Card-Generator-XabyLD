@@ -2,6 +2,7 @@ let selectorHeaderSuit = document.querySelector(".card-header");
 let selectorBodyNumber = document.querySelector(".card-body");
 let selectorFooterSuit = document.querySelector(".card-footer");
 let suit;
+let prueba = 0;
 
 const insertarP = () => {
   const myP = document.createElement("p");
@@ -56,4 +57,10 @@ const anotherCard = () => {
     .addEventListener("click", function() {
       numberSuitRandom();
     });
+};
+
+const timer = () => {
+  setInterval(() => {
+    numberSuitRandom();
+  }, 10000);
 };
