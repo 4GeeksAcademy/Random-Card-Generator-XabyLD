@@ -4,9 +4,15 @@ let selectorFooterSuit = document.querySelector(".card-footer");
 let suit;
 let prueba = 0;
 
-const setWidthHeightCard = () => {
-  let selectedWidthInput = document.getElementById("widthCard").value;
+const setWidthCard = () => {
+  let selectedWidthInput = document.getElementById("widthCard").value + "rem";
+  let selectedHeightInput = document.getElementById("heightCard").value + "rem";
   let selectedCard = document.querySelector(".card");
+  console.log(selectedWidthInput);
+  console.log(selectedHeightInput);
+
+  selectedCard.style.width = selectedWidthInput;
+  selectedCard.style.height = selectedHeightInput;
 };
 
 const numberSuitRandom = () => {

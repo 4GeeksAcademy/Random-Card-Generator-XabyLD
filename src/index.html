@@ -7,17 +7,23 @@
 
 
   </head>
-  <body onload= "setWidthHeightCard(),numberSuitRandom()">
-    <input id="widthCard" placeholder="Set the width"> 
+  <body onload= "numberSuitRandom()">
+    <div class="inputs">
+      <input id="widthCard" placeholder="Set the width"> 
       <input id="heightCard" placeholder="Set the height">
+    </div>  
+    <div class="setButton">
+      <button id="changeWidthHeight"onclick="setWidthCard()" type="button"> Set the size!</button>
+    </div>
+   
+    
     <div class="container-fluid text-center">
       
-      <div class="card" style= "width: 33rem; height: 33rem; background-color: white;">
-        <div class="card-header">
-          
+      
+      <div class="card">
+        <div class="card-header">   
         </div>
         <div class="card-body" style="text-align: center;">
-          
         </div>
         <div class="card-footer" style="text-align: end;">
         </div>
@@ -28,8 +34,7 @@
 
     <button type="button" id="buttonCharge" onload="timer()"onclick="anotherCard()">Try with another card!</button>
 
-    <div onload="restaSegundo()"id="contador">10</div>
-
+    <div onload="restaSegundo()" id="contador">10</div>
     </div>
     <script src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

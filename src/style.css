@@ -8,14 +8,34 @@ body {
   margin-top: 20px;
 }
 
-div {
-  font-size: 9.375rem;
-}
-
 button {
   display: block;
   margin: auto;
   margin-top: 20px;
   padding: 10px;
   border-radius: 40px;
+}
+
+.card {
+  border-radius: 10px;
+  font-size: 9.375rem;
+  width: 33rem;
+  height: 33rem;
+  background-color: white;
+}
+
+.inputs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#contador {
+  text-align: center;
+  font-size: 9rem;
+}
+
+#contador:hover {
+  transform: scale(1.2);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
